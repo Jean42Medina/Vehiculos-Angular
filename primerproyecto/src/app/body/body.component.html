@@ -1,0 +1,77 @@
+<div class="container mt-2">
+  <div class="row">
+    <h1 class="col-12">Consulte Vehiculos</h1>
+    <div class="col-6 mt-2">
+      <div class="card col-12">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <label>Foto</label>
+                <img src="https://lanota-latina.com/wp-content/uploads/2016/09/Buick-LaCrosse-800x500_c.png"class="col-12">
+              </div>
+              <div class="form-group">
+                <label>Placa</label>
+                <input type="text" class="form-control" placeholder="Placa" [(ngModel)]="contactoNuevo.Placa">
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-primary" (click)="crearContacto(contactoNuevo.Placa, contactoNuevo.Modelo, contactoNuevo.Color, contactoNuevo.Chasis)">Agregar</button>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="form-group">
+                <label>Modelo</label>
+                <input type="text" class="form-control" placeholder="Modelo" [(ngModel)]="contactoNuevo.Modelo">
+              </div>
+              <div class="form-group">
+                  <label>Color</label>
+                  <input type="text" class="form-control" placeholder="Color" [(ngModel)]="contactoNuevo.Color">
+                </div>
+              <div class="form-group">
+                <label>Chasis</label>
+                <input type="email" class="form-control" placeholder="Chasis" [(ngModel)]="contactoNuevo.Chasis">
+                <small class="form-text text-muted">Ingrese un chasis válido</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h1 class="col-12">Consultas</h1>
+    <div *ngFor="let contacto of contactos" class="col-6 mt-2">
+      <div class="card col-12">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <label>Foto</label>
+                <img src="https://lanota-latina.com/wp-content/uploads/2016/09/Buick-LaCrosse-800x500_c.png" class="col-12">
+              </div>
+              <div class="form-group">
+                <label>Placa</label>
+                <input type="text" class="form-control" placeholder="Placa " [(ngModel)]="contacto.Placa">
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="form-group">
+                <label>Modelo</label>
+                <input type="text" class="form-control" placeholder="Modelo" [(ngModel)]="contacto.Modelo">
+              </div>
+              <div class="form-group">
+                  <label>Color</label>
+                  <input type="text" class="form-control" placeholder="Color" [(ngModel)]="contacto.Color">
+                </div>
+              <div class="form-group">
+                <label>Chasis</label>
+                <input type="email" class="form-control" placeholder="Chasis" [(ngModel)]="contacto.Chasis">
+                <small class="form-text text-muted">Ingrese un Chasis válido</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
